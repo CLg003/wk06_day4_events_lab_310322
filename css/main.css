@@ -1,5 +1,5 @@
 body {
-  font-family: Palatino;
+  font-family: Monaco, Arial, sans-serif;
   padding-top: 40px;
   margin: auto;
   width: 90%;
@@ -14,6 +14,22 @@ form > input {
   font-weight: 800;
   padding: 10px;
   margin: 20px 0;
+}
+
+form > input:hover {
+  background-color: rgb(114, 194, 167);
+}
+
+#delete-all {
+  color: rgb(203, 2, 2);
+  text-transform: uppercase;
+  font-weight: 800;
+  padding: 5px;
+}
+
+#delete-all:hover {
+  background-color: rgb(203, 2, 2);
+  color: white;
 }
 
 #title {
