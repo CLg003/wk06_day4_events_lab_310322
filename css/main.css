@@ -1,3 +1,54 @@
 body {
   font-family: Palatino;
+  padding-top: 40px;
+  margin: auto;
+  width: 90%;
+}
+
+.primary {
+margin: 10px;
+}
+
+form > input {
+  text-transform: uppercase;
+  font-weight: 800;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+#title {
+  margin: 5px;
+  padding: 5px;
+}
+
+#author {
+  margin: 5px;
+  padding: 5px;
+}
+
+#category {
+  margin: 5px;
+  padding: 5px;
+}
+
+#reading-list {
+  display: flex;
+  flex-flow: wrap row;
+}
+
+ul {
+  list-style: none;
+}
+
+.reading-list-item {
+  background-color: rgb(114, 194, 167);
+  min-width: 200px;
+  padding: 20px;
+  margin: 10px;
+  border: 2px solid grey;
+  border-radius: 20px;
+}
+
+li > h3 {
+  font-weight: 800;
 }
