@@ -18,52 +18,47 @@ document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', handleFormSubmit);
 })
 
-const handleNewItemFormSubmit = function (event) {
+const handleFormSubmit = function (event) {
   event.preventDefault();
-
+  
+// SOLUTION:
   // const readingListItem = createReadingListItem(event.target);
   // const readingList = document.querySelector('#reading-list');
   // readingList.appendChild(readingListItem);
   // event.target.reset();
 
   createListItem(event);
-  document.form('#new-item-form').reset();
+  event.target.reset();
 }
 
-  // From here to end one function in solution
+// From here to end one function in solution
 const handleTitleInput = function(event) {
-  const title = event.target.value;
+  const title = document.createElement('h3');
+  title.textContent = event.target.title.value;
   return title;
 }
 
 const handleAuthorInput = function(event) {
-  const author = event.target.value;
+  const author = document.createElement('h4');
+  author.textContent = event.target.author.value;
   return author;
 }
 
 const handleCategorySelect = function(event) {
-  const category = event.target.value;
+  const category = document.createElement('p');
+  category.textContent = event.target.category.value;
   return category;
-}
-
-const createBook = function(event) {
-  title = handleTitleInput(event);
-  author = handleAuthorInput(event);
-  category = handleCategorySelect(event);
-  const book = `${title} by ${author} (${category})`;
-  return book;
 }
 
 const createListItem = function(event) {
   const newListItem = document.createElement('li');
-  newListItem.textContent = createBook(event);
+  newListItem.appendChild(handleTitleInput(event));
+  newListItem.appendChild(handleAuthorInput(event));
+  newListItem.appendChild(handleCategorySelect(event));
   const list = document.querySelector('ul'); 
   list.appendChild(newListItem);
 }
 // Single function in solution finishes here
-
-// const listItems = document.querySelector('ul');
-// console.log(listItems);
 
 
 
